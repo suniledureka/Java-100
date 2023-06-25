@@ -1,30 +1,33 @@
 package co.edureka.web;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 
-@WebServlet("/welcome")
-public class WelcomeServlet extends HttpServlet {
+@WebServlet("/form1")
+public class Form1Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
-		out.println("<html>");
-		out.println("<body style=\"background:linear-gradient(to right, orange, white, green); text-align:center\">");
-		out.println("<h1> edureka limited</h1>");
-		out.println("<img src=images/edureka.png width=350px>");
-		out.println("<hr>");
-		out.println("<p style=\"text-align:left;font-size:18px\">Hello " + request.getParameter("txt_uid")+"</p>");
-		out.println("<hr>");
-		out.println("</body></html>");
+		out.println("<body bgcolor=cyan>");
+		
+		out.println("<form action=form2 method=get>");
+		out.println("<h2>");
+		
+		out.println("Name <input type=text name=t1 size=30><br><br>");
+		out.println("Age <input type=text name=t2 size=5><br><br>");
+		out.println("Address <input type=text name=t3 size=30><br><br>");
+		out.println("<input type=submit value=SUBMIT>");
+		out.println("</form>");
+		out.println("</h2>");
+		out.println("</body>");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

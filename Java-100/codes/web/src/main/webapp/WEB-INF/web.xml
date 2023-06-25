@@ -17,4 +17,25 @@
     <servlet-name>LifecycleServlet</servlet-name>
     <url-pattern>/life</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>co.edureka.web.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <!-- 
+  <filter>
+    <display-name>WelcomeFilter</display-name>
+    <filter-name>WelcomeFilter</filter-name>
+    <filter-class>co.edureka.web.WelcomeFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>WelcomeFilter</filter-name>
+    <url-pattern>/welcome</url-pattern>
+  </filter-mapping>
+  -->
 </web-app>
